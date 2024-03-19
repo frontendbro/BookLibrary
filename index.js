@@ -45,6 +45,19 @@ router.get('/api/books', (req, res) => {
 })
 
 // Get by id
+app.use('/api/books/:id/download', (req, res, next) => {
+  const { books } = store
+  const { id } = req.params
+
+  const currentBook = books.find(book => book.id === id)
+
+  // Не понимаю как вернуть файл и что означает эта ошибка
+  // Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+  res.json(express.static(`./${currentBook?.fileBook}`))
+
+  next()
+})
+
 router.get('/api/books/:id', (req, res) => {
   const { books } = store
   const { id } = req.params
