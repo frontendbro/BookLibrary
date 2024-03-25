@@ -1,13 +1,74 @@
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #f8f8f8;
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f8f8;
 }
 
 .header {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-row {
+  margin: 0;
+  padding: 0;
 }
 
 .header li {
-    margin-right: 8px;
+  margin-right: 8px;
+}
+
+.row {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.row_title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row_action {
+  display: flex;
+}
+
+.view_btn,
+.edit_btn,
+.delete_btn {
+  padding: 5px 10px;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.view_btn:hover,
+.edit_btn:hover,
+.delete_btn:hover {
+  opacity: 0.8;
+}
+
+.view_btn {
+  background-color: #4caf50;
+  margin-right: 8px;
+}
+
+.edit_btn {
+  background-color: #2196f3;
+  margin-right: 8px;
+}
+
+.delete_btn {
+  background-color: #f44336;
 }

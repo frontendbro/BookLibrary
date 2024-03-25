@@ -5,12 +5,11 @@ const booksRouter = require('./routes/booksRouter')
 
 const app = express()
 app.use(express.urlencoded({ extended: true }))
-app.set("view engine", "ejs")
-app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'ejs')
+app.use(express.static(__dirname + '/public'))
 
 app.use('/', indexRouter)
 app.use('/books', booksRouter)
-
 
 // app.use(errorMiddleware)
 // Login
@@ -143,7 +142,6 @@ app.use('/books', booksRouter)
 //     res.json('Code:404 | Book was not found')
 //   }
 // })
-
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT)

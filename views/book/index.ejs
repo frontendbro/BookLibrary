@@ -1,5 +1,18 @@
 <%- include('../parts/start', {title: title})%>
 
-<h1>Books</h1>
+<h1><%= title %></h1>
+
+<ul class="list-row">
+  <% books.map((book, idx) => { %>
+  <li class="row">
+    <div class="row_title"><%= book.title %></div>
+    <div class="row_action">
+      <a class="view_btn" href="/book/<%+ book.id%>">view</a>
+      <a class="edit_btn" href="/book/<%+ book.id%>">edit</a>
+      <a class="delete_btn" href="/book/<%+ book.id%>">delete</a>
+    </div>
+  </li>
+  <% }) %>
+</ul>
 
 <%- include('../parts/end')%>
