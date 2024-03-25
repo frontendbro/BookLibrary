@@ -90,7 +90,6 @@ router.get('/update/:id', (req, res) => {
 })
 
 router.post('/update/:id', (req, res) => {
-  console.log('xxxxxxxxxxx');
   const { books } = store
   const { id } = req.params
   const { title, description } = req.body
