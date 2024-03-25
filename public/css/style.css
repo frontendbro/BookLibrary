@@ -13,6 +13,7 @@ body {
 .list-row {
   margin: 0;
   padding: 0;
+  margin-top: 8px;
 }
 
 .header li {
@@ -44,6 +45,7 @@ body {
 .view_btn,
 .edit_btn,
 .delete_btn {
+  display: inline-block;
   padding: 5px 10px;
   color: #000;
   border: none;
@@ -71,4 +73,18 @@ body {
 
 .delete_btn {
   background-color: #f44336;
+}
+
+.form_field {
+  margin-bottom: 16px;
+}
+
+.form_field_label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form_title {
+  font-size: 24px;
+  margin-bottom: 16px;
 }

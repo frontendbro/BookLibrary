@@ -1,0 +1,21 @@
+<%- include('../parts/start', {title: title})%>
+
+<h1><%= title %></h1>
+
+<form action="/books/update/<%= book.id%>" method="post">
+  <div class="form_field">
+    <label for="title" class="form_field_label">Title</label>
+    <input type="text" name="title" id="title" value="<%= book.title %>" />
+  </div>
+  
+  <div class="form_field">
+    <label for="published_date" class="form_field_label">Description</label>
+    <input type="text" name="description" id="description" value="<%= book.description %>"/>
+  </div>
+
+  <div>
+    <input class="view_btn" type="submit" value="Edit" />
+  </div>
+</form>
+
+  <%- include('../parts/end')%>

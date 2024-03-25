@@ -2,14 +2,16 @@
 
 <h1><%= title %></h1>
 
+<a class="view_btn" href="/books/create">Create new book</a>
+
 <ul class="list-row">
   <% books.map((book, idx) => { %>
   <li class="row">
     <div class="row_title"><%= book.title %></div>
     <div class="row_action">
-      <a class="view_btn" href="/book/<%+ book.id%>">view</a>
-      <a class="edit_btn" href="/book/<%+ book.id%>">edit</a>
-      <a class="delete_btn" href="/book/<%+ book.id%>">delete</a>
+      <a class="view_btn" href="/books/view/<%= book.id%>">view</a>
+      <a class="edit_btn" href="/books/update/<%= book.id%>">edit</a>
+      <a class="delete_btn" href="/books/delete/<%= book.id%>">delete</a>
     </div>
   </li>
   <% }) %>
