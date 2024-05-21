@@ -1,0 +1,6 @@
+docker pull node:15.14
+docker run -it --name mynode -e NAME=Иван -e SURNAME=Иванов node:15.14
+console.log('Привет, ' + process.env.NAME + ' ' + process.env.SURNAME + '!')
+docker stop mynode
+docker rm mynode
+docker rmi node:15.14

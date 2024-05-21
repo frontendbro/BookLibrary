@@ -1,0 +1,9 @@
+docker pull node:15.14
+docker run -d --name first_node -v "$(pwd)/data:/var/first/data" node:15.14
+docker run -d --name second_node -v "$(pwd)/data:/var/second/data" node:15.14
+docker exec -it first_node sh -c 'echo "Это тестовый файл" > /var/first/data/testfile1.txt'
+echo "Это второй тестовый файл" > data/testfile2.txt
+docker exec -it second_node sh -c 'ls /var/second/data && cat /var/second/data/testfile1.txt && cat /var/second/data/testfile2.txt'
+docker stop first_node second_node
+docker rm first_node second_node
+docker rmi node:15.14

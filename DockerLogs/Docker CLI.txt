@@ -1,0 +1,9 @@
+docker run --name pinger -i -t busybox ping netology.ru
+PING netology.ru (104.22.40.171): 56 data bytes
+64 bytes from 104.22.40.171: seq=0 ttl=63 time=21.095 ms
+64 bytes from 104.22.40.171: seq=1 ttl=63 time=21.510 ms
+64 bytes from 104.22.40.171: seq=2 ttl=63 time=19.928 ms
+64 bytes from 104.22.40.171: seq=3 ttl=63 time=22.046 ms
+64 bytes from 104.22.40.171: seq=4 ttl=63 time=20.825 ms
+64 bytes from 104.22.40.171: seq=5 ttl=63 time=19.786 ms
+64 bytes from 104.22.40.171: seq=6 ttl=63 time=19.970 ms
